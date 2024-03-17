@@ -1,0 +1,172 @@
+#transition{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border: 2px solid black;
+    /* transition: all;
+    transition-duration: 2s;
+    transition-timing-function: steps(3);
+    transition-delay: 1s;
+    ei 4 ta line ke 1 line a likha jay */
+    transition: all 2s steps(2) 1s; 
+    
+}
+
+#transition:hover{
+    background-color: blue;
+    color: white;
+}
+
+#transition:active{
+    background-color: pink;
+    color: black;
+}
+
+#transform1{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    border: 2px dotted orange;
+    transform: rotate(90deg);
+}
+
+#transform2{
+    height: 100px;
+    width: 100px;
+    background-color: darkblue;
+    border: 2px dotted orange;
+    transform: rotateZ(90deg);
+    /* (rotateX, rotateY korle nao dekha zete pare) */    
+}
+
+#transform3{
+    height: 100px;
+    width: 100px;
+    background-color: darkmagenta;
+    border: 2px dotted orange;
+    transition: all 3s ease-in-out 1s;
+}
+#transform3:hover{
+    background-color: darkmagenta;
+    color: white;
+    transform: scale(2);
+    /* ekhane direct 2,3 gun kora jay */
+    /* ekhane scaleX scaleY o use kora jay */    
+}
+#transform3:active{
+    background-color: darkmagenta;
+    color: white;
+    transform: scale(12,2);
+    /* ekhane XY er sapekkhe scale kora hoise */
+    /* ekhane scaleX scaleY o use kora jay */
+}
+
+#transform4{
+    height: 100px;
+    width: 100px;
+    background-color: darkgreen;
+    border: 2px dotted orange;
+    /* transition: all;
+    transition-duration: 2s;
+    transition-timing-function: steps(3);
+    transition-delay: 1s; */
+    /* ei 4 ta line ke 1 line a likha jay */     
+    transition: all 2s ease-in 0s;
+}
+
+#transform4:hover{
+    background-color: red;
+    color: white;
+    transform: scale(2);
+    /* ekhane scaleX scaleY o use kora jay */
+    transform: rotate(350deg);
+    /* (rotateX, rotateY, rotateZ o use kora zete pare) */
+}
+
+#transform5{
+    height: 100px;
+    width: 100px;
+    background-color: darkgoldenrod;
+    border: 2px solid black;
+    transition: all 2s ease-in 0s;
+}
+
+#transform5:hover{
+    background-color: red;
+    color: white;
+    transform: translate(100px,-30px);
+    /* scaleX, scaleY eigulao use kora jay */
+}
+ 
+#transform6{
+    height: 100px;
+    width: 100px;
+    background-color: darkcyan;
+    border: 2px solid black;
+    transition: all 2s ease-in 0s;
+}
+
+#transform6:hover{
+    background-color: red;
+    color: white;
+    transform: skew(10deg,30deg);
+    /* dui kna theke taan mara hocche skew */
+    /* skewX, skewY eigulao use kora jay */
+}
+
+#animation{
+    height: 100px;
+    width: 100px;
+    background-color: royalblue;
+    border: 2px solid black;
+    position: absolute;
+    /* animation-name: animation;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal; */
+    /* 6 ta line 1 line a likha jay  */
+    animation: animation 5s ease-in 0s infinite normal;
+}
+
+@keyframes animation{
+    /* from ba to diyeo hoy, % diyeo hoy  */
+    0% {background-color: royalblue;
+        left: 0px;
+    }
+
+    60% {background-color: yellow;
+        
+    }
+
+    100% {background-color: red; 
+        left: 200px;
+    }
+}
+
+#loader{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 10px solid black;
+    border-top: 10px solid red;
+    /* animation-name: loaderAnimation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal; */
+    /* 6 ta line 1 line a likha jay  */
+    animation: loaderAnimation 2s ease-in 0s infinite normal;
+}
+
+@keyframes loaderAnimation{
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+
+}
